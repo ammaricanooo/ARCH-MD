@@ -1,6 +1,6 @@
 export default {
     command: ["kick", "tendang"],
-    example: "Example: %pkick *@tagUser*",
+    example: `Example: .kick *@tagUser*`,
     description: "kick user from group",
     name: "kick",
     tags: "admin",
@@ -9,7 +9,7 @@ export default {
     botAdmin: true,
     group: true,
 
-    run: async (m, {text}) => {      
+    run: async (m, {text}) => {
         if (m.args[0] === `@${global.owner}`) {
           m.reply("Sorry you can't kick my owner")
         } else if (m.args[0] === `@${global.pairingNumber}`) {

@@ -1,10 +1,12 @@
 export default {
-  command: ["unbanchat", "ubnc"],
+  command: ["unbanchat", "unban" , "ubnc"],
   name: "unbanchat",
   tags: "owner",
 
   group: true,
-  
+  owner: true,
+  // admin: true,
+
   run: async (m) => {
     if (m.isOwner == true) {
     try {

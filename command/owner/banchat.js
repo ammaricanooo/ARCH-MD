@@ -1,9 +1,11 @@
 export default {
-  command: ["banchat", "bnc"],
+  command: ["banchat","ban", "bnc"],
   name: "banchat",
   tags: "owner",
 
   group: true,
+  owner: true,
+  // admin: true,
 
   run: async (m) => {
     if (m.isOwner == true) {

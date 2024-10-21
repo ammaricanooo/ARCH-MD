@@ -7,7 +7,7 @@ export default {
     run: async (m, { conn }) => {
         const Url = m.args[0]
         const apikeys = global.APIKeys.neoxr
-        
+
         if (!Url) {
             m.reply(global.msg.putLink)
         } else {
@@ -21,7 +21,7 @@ export default {
             } else {
 
             m.reply(global.msg.dlloading)
-        const ApiUrl = `https://api.neoxr.eu/api/youtube?url=${encodeURIComponent(Url)}&type=audio&quality=128kbps&apikey=${apikeys}`
+        const ApiUrl = `https://api.arifzyn.tech/download/youtube?url=${encodeURIComponent(Url)}&type=audio&quality=720'`
 
         console.log(ApiUrl)
         let response;
@@ -33,18 +33,18 @@ export default {
         }
 
 
-        const { title, channel, thumbnail, duration, views, publish } = response
-        const { size, url } = response.data
+        const { title, channel, thumbnail, duration, views, ago } = response.result
+        // const size = response.result
+        const url = response.result.url
 
-        console.log(response.data)
+        console.log(response)
 
         let replyText = `
 title: ${title || "Unknown"}
 views: ${views || "Unknown"}
 duration: ${duration || "Unknown"}
-size: ${size || "Unknown"}
 channel: ${channel || "Unknown"}
-publish: ${publish || "Unknown"}
+publish: ${ago || "Unknown"}
         `
 
         const sendFile = url

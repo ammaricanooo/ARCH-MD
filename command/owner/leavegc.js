@@ -5,12 +5,14 @@ export default {
     tags: "owner",
 
     group: true,
+    owner: true,
+    admin: true,
 
     run: async (m) => {
         if (global.owner) {
             await m.reply('```GoodBye, see you next Time!```')
             conn.groupLeave(m.chat)
-        
+
         } else if (m.isAdmin == true) {
         await m.reply('```GoodBye, see you next Time!```')
 

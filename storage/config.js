@@ -4,12 +4,12 @@ import { fileURLToPath } from "url";
 import Function from "../system/lib/function.js";
 
 //—————「 Setings your bot 」—————//
-global.name = "Zaikky Farel Aldino Zahran"; // your name
-global.wm = "XYNZBOT"; // your bot name
+global.name = "Ammar Abdul Malik"; // your name
+global.wm = "ARCH BOT"; // your bot name
 
-global.author = "Zaikky Farel Aldino Zahran"; // author name
+global.author = "Ammar Abdul Malik"; // author name
 global.packname = "Created Sticker By";
-global.link = "https://github.com/fazzrqy"; //your github (if you have)
+global.link = "https://github.com/4marr"; //your github (if you have)
 
 global.owner = [""]; // your number owner
 global.pairingNumber = ""; //your bot number
@@ -44,8 +44,7 @@ global.msg = {
 };
 
 global.number = { //using for donation, put your phone number here!
-  Axis: "6283852515287", //your phone number 1
-  Tri: "6289653007306", //your phone number 2 (opsional)
+  Tri: "62895702633030", //your phone number 2 (opsional)
 }
 
 global.linkDonate = {  //using for donation, put your link donate here!
@@ -63,7 +62,8 @@ global.APIs = {
   nyxs: "https://api.nyxs.pw",
   agatz: "https://api.agatz.xyz",
   widipe: "https://widipe.com",
-  neoxr: "https://api.neoxr.eu"
+  neoxr: "https://api.neoxr.eu",
+  ryzendesu: "https://api.ryzendesu.vip",
 };
 
 global.APIKeys = {

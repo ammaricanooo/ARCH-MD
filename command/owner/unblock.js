@@ -7,8 +7,8 @@ export default {
     owner: true,
 
     run: async (m, {conn}) => {
-        const number = m.args[0];
-        const numberWa = number + "@s.whatsapp.net"; 
+        const number = m.args[0].replace("@", "");
+        const numberWa = number + "@s.whatsapp.net";
         const user = numberWa.replace("@", "");
         const msg = "You unblock by owner, now you can use this bot again";
 
@@ -20,7 +20,7 @@ export default {
             global.db.data.users[user].banned = false;
             global.db.data.users[user].bannedReason = "";
             m.reply(`Succes unbanned and unblock @${number}`);
-            
+
             const option = {
                 text: msg,
                 contextinfo: {mentionedJid: [number]},

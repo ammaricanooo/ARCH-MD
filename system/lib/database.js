@@ -167,7 +167,7 @@ export default class Database {
         if (!isBoolean(chat.antidelete)) chat.antidelete = true;
         if (!isBoolean(chat.antilink)) chat.antilink = false;
         if (!isBoolean(chat.antispam)) chat.antispam = false;
-        if (!isBoolean(chat.antitoxic)) chat.antitoxic = false;
+        if (!isBoolean(chat.antitoxic)) chat.antitoxic = true;
         if (!isBoolean(chat.detect)) chat.detect = true;
         if (!isNumber(chat.expired)) chat.expired = 0;
         if (!isBoolean(chat.isBanned)) chat.isBanned = false;
@@ -181,7 +181,7 @@ export default class Database {
           antidelete: true,
           antilink: false,
           antispam: false,
-          antitoxic: false,
+          antitoxic: true,
           detect: true,
           expired: 0,
           isBanned: false,

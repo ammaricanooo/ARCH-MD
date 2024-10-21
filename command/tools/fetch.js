@@ -3,7 +3,7 @@ import { format } from "util";
 import path from "path";
 
 export default {
-    command: ["get"],
+    command: ["fetch", "get"],
     name: "tools",
     tags: "tools",
 

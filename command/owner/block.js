@@ -8,18 +8,19 @@ export default {
 
     run: async (m, {conn}) => {
         const msg = m.args[1];
-        const number = m.args[0];
+        const number = m.args[0].replace("@", "");
         const user = number.replace("@", "");
+        console.log(number)
 
         if (!number) throw "where the number";
-            if (typeof number != 'number') throw "Tag user or type manually";
+
                 try{
                     const option = {
-                        text: `You have been blocked by owner, with reason: ${msg || "Unknown"}\n\n and if you want to unblock + unbanned, chat owner with this link:\nwa.me/6289653007306`,
+                        text: `You have been blocked by owner, with reason: ${msg || "Unknown"}\n\n and if you want to unblock + unbanned, chat owner with this link:\nwa.me/62895702633030`,
                         contextinfo: {mentionedJid: [number]}
                     };
                     await conn.sendMessage(user + "@s.whatsapp.net", option);
-            
+
                     await conn.updateBlockStatus(user, "block");
                     global.db.data.users[user].banned = true;
                     global.db.data.users[user].bannedReason = msg || "";
@@ -29,5 +30,5 @@ export default {
                     m.reply("Error");
                     console.log(err);
                 }
-    } 
+    }
 }

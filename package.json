@@ -1,5 +1,5 @@
 {
-  "name": "XYNZBOT",
+  "name": "ARCH BOT",
   "version": "1.0.0",
   "description": "Free WhatsApp Bot With ESM Module",
   "main": "index.js",
@@ -29,7 +29,7 @@
     "moment-timezone": "^0.5.43",
     "mongoose": "^8.5.1",
     "node-fetch": "^3.3.2",
-    "node-webpmux": "^3.1.7",
+    "node-webpmux": "^3.2.0",
     "path": "^0.12.7",
     "syntax-error": "^1.4.0",
     "terminal-kit": "^3.0.1",

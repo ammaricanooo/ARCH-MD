@@ -3,7 +3,7 @@ import path from "path";
 import Jimp from "jimp";
 import axios from "axios";
 import chalk from "chalk";
-import cheerio from "cheerio";
+import * as cheerio from 'cheerio';
 import { format } from "util";
 import { platform } from "os";
 import term from "terminal-kit";

@@ -1,7 +1,8 @@
 export default {
     command: ["setnamegc", "setname"],
+    example: `Example: %p%cmd *text*`,
     description: "set name group",
-    name: "set name gc",
+    name: "setnamegc",
     tags: "admin",
 
     admin: true,

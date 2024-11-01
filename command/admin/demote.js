@@ -1,8 +1,8 @@
 export default {
     command: ["demote", "demo"],
-    example: `Example: .demote *@tagUser*`,
+    example: `Example: %p%cmd *@tagUser*`,
     description: "demote user",
-    name: "promote",
+    name: "demote",
     tags: "admin",
 
     admin: true,

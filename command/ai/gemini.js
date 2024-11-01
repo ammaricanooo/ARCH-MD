@@ -1,6 +1,6 @@
 export default {
     command: ["gemini"],
-    description: "Search some informasion using Gemini Advanced",
+    description: "Search some information using Gemini",
     name: "gemini",
     tags: "ai",
 

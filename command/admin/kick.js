@@ -1,6 +1,6 @@
 export default {
     command: ["kick", "tendang"],
-    example: `Example: .kick *@tagUser*`,
+    example: `Example: %p%cmd *@tagUser*`,
     description: "kick user from group",
     name: "kick",
     tags: "admin",

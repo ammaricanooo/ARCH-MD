@@ -1,5 +1,6 @@
 export default {
   command: ["waifudiff", "waidiff", "widiff", "wiff"],
+  example: `Example: %p *@tagUser*`,
   description: "generate waifu using ai",
   name: "waifudiff",
   tags: "ai",
@@ -13,7 +14,7 @@ export default {
       }, 1000)
     } else {
     const query = text
-    conn.reply(m.chat, { caption: "Nih kak..", image: { url: `https://api.ryzendesu.vip/api/ai/waifu-diff?prompt=${encodeURIComponent(query)}` } })
+    m.reply(`https://api.ryzendesu.vip/api/ai/waifu-diff?prompt=${encodeURIComponent(query)}`)
     }
   }
 }

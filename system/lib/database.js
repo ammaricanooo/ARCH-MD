@@ -80,7 +80,7 @@ export default class Database {
       if (!isNumber(user.hit)) user.hit = 1;
 
       if (!isNumber(user.lastclaim)) user.lastclaim = 0;
-      if (!isBoolean(user.autolevelup)) user.autolevelup = false;
+      if (!isBoolean(user.autolevelup)) user.autolevelup = true;
       if (!user.grade) user.grade = "Newbie";
 
       if (!isBoolean(user.premium)) user.premium = false;
@@ -107,7 +107,7 @@ export default class Database {
 
         lastclaim: 0,
         grade: "Newbie",
-        autolevelup: false,
+        autolevelup: true,
 
         premium: false,
         premiumTime: 0,

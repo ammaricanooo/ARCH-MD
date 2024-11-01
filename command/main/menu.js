@@ -44,6 +44,8 @@ export default {
         },
       ];
 
+      let thumbnail = "https://8030.us.kg/file/KBbXS0biTw3K.jpg"
+
       return conn.sendListM(m.chat, body,"Love you " + m.pushName + " Cyuu >.<\n\n" + wm, sections, "", m);
     } else {
       let body =

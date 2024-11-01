@@ -1,6 +1,6 @@
 export default {
     command: ["promote", "pro"],
-    example: `Example: .promote *@tagUser*`,
+    example: `Example: %p%cmd *@tagUser*`,
     description: "promote user",
     name: "promote",
     tags: "admin",

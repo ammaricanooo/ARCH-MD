@@ -244,7 +244,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         ppuser = await conn.profilePictureUrl(user, "image");
                     } catch {
                         ppuser =
-                            "https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg";
+                            "https://telegra.ph/file/24fa902ead26340f3df2c.png";
                     } finally {
                         let tekswell = `Halo @${user.split("@")[0]
                             } 👋\n\nSelamat datang di grup ${metadata.subject
@@ -362,7 +362,7 @@ export async function presenceUpdate(presenceUpdate) {
         const username = nouser[0].split("@")[0];
         const timeAfk = new Date() - user.afk;
         const caption = `@${username} berhenti afk, dia sedang mengetik\n\nAlasan: ${user.afkReason ? user.afkReason : "tidak ada alasan"
-            }\nSelama: ${timeAfk.toTimeString()} yang lalu`;
+            }\nSelama: ${timeAfk} yang lalu`;
 
         conn.sendMessage(id, { text: caption });
         user.afk = -1;

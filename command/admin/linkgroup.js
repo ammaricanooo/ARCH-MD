@@ -1,7 +1,7 @@
 export default {
     command: ["linkgroup", "linkgrup", "linkgc"],
     description: "link group",
-    name: "link gc",
+    name: "linkgc",
     tags: "admin",
 
     admin: true,

@@ -149,6 +149,7 @@ Type *nyerah* to surrender`.trim();
             await conn.sendQuick(
                 m.chat,
                 `Selamat @${m.sender.split('@')[0]} 🎉 Jawaban kamu benar!
+
 balance kamu bertambah sebesar: ${json.winScore} dan limit kamu juga bertambah sebesar: 5 limit!
 
 

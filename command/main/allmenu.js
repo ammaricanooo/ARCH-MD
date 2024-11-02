@@ -33,8 +33,10 @@ Prefix : 「 ${m.prefix} 」
 
 ┌─〔 *Artificial Intelegents* 〕
 │• ${m.prefix}ai/openai <text>
-│• ${m.prefix}gemini <text>
 │• ${m.prefix}blackbox <text>
+│• ${m.prefix}flux <text>
+│• ${m.prefix}gemini <text>
+│• ${m.prefix}voicenahida <text>
 │• ${m.prefix}waifudiff <text>
 └────
 
@@ -84,6 +86,21 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}lyrics <title>
 └────
 
+┌─〔 *Random* 〕
+│• ${m.prefix}akira
+│• ${m.prefix}akiyama
+│• ${m.prefix}ana
+│• ${m.prefix}asuna
+│• ${m.prefix}ayuzawa
+│• ${m.prefix}boruto
+│• ${m.prefix}chitanda
+│• ${m.prefix}chitoge
+│• ${m.prefix}deidra
+│• ${m.prefix}doraemon
+│• ${m.prefix}elaina
+│• ${m.prefix}emilia
+└────
+
 ┌─〔 *Religi* 〕
 │• ${m.prefix}ayatkursi
 │• ${m.prefix}kisahnabi <name>
@@ -96,10 +113,10 @@ Prefix : 「 ${m.prefix} 」
 
 ┌─〔 *Tools* 〕
 │• ${m.prefix}fetch <url>
-│• ${m.prefix}q <tag msg> (Perbaikan)
+│• ${m.prefix}q <tag msg> (*Perbaikan*)
 │• ${m.prefix}rvo <tag msg>
 │• ${m.prefix}ssweb <url>
-│• ${m.prefix}tourl <gambar> (Perbaikan)
+│• ${m.prefix}tourl <gambar> (*Perbaikan*)
 │• ${m.prefix}upsclae/hd <gambar>
 └────
 `
@@ -136,6 +153,6 @@ let fkon = {
                 }
               }, mentions: [m.sender]
             }
-          }, { quoted: fkon });
+          }, { quoted: m });
     },
 };

@@ -1,6 +1,6 @@
 import similarity from 'similarity';
 
-const threshold = 0.92;
+const threshold = 0.72;
 const timeout = 120000;
 const winScore = 3499;
 
@@ -160,7 +160,7 @@ Mau main lagi?`,
             );
             delete conn.asahotak[id];
         } else {
-            conn.sendMessage(m.chat, {
+            await conn.sendMessage(m.chat, {
                 react: {
                     text: '❌',
                     key: m.key,

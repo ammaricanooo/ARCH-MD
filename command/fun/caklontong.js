@@ -90,9 +90,23 @@ const handler = {
         );
         json = json[Math.floor(Math.random() * json.length)];
 
+        function ubahMenjadiUnderscore(kalimat) {
+            return kalimat.split(' ').map(kata => {
+                if (kata.length > 0) {
+                    return kata[0] + ' _ '.repeat(kata.length - 2) + kata[kata.length - 1];
+                }
+                return '';
+            }).join(' ');
+        }
+        
+        const kalimat = json.jawaban;
+        const hasil = ubahMenjadiUnderscore(kalimat);
+
         let caption = `[ CAK LONTONG ]
 
 • *Question :* ${json.soal}
+• *Clue :* ${hasil}
+• *Jumlah huruf :* ${json.jawaban.length}
 • *Timeout :* 60 seconds
 
 

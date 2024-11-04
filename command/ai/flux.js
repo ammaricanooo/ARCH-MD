@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export default {
-  command: ["flux"],
+  command: ["bng"],
   description: "create an image using flux",
   name: "flux",
   tags: "ai",

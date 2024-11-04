@@ -153,6 +153,6 @@ let fkon = {
                 }
               }, mentions: [m.sender]
             }
-          }, { quoted: fkon });
+          }, { quoted: m });
     },
 };

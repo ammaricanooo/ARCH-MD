@@ -5,8 +5,8 @@ let handler = {
     group: true,
     run: async (m) => {
         let user = global.db.data.users[m.sender]
-        // if (!user.autolevelup)
-        //     return !0
+        if (!user.autolevelup)
+            return !0
         let users = Object.entries(global.db.data.users).map(([key, value]) => {
             return { ...value, jid: key }
         })

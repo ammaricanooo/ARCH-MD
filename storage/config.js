@@ -11,7 +11,7 @@ global.author = "Ammar Abdul Malik"; // author name
 global.packname = "Created Sticker By";
 global.link = "https://github.com/4marr"; //your github (if you have)
 
-global.owner = [""]; // your number owner
+global.owner = ["62895702633030"]; // your number owner
 global.pairingNumber = ""; //your bot number
 
 global.prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|/~!?@#%^&.©^]/i;

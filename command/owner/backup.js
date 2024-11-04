@@ -7,6 +7,8 @@ export default {
   name: "backup",
   tags: "owner",
 
+  owner: true,
+
   run: async (m, { conn }) => {
     let exec = promisify(_exec).bind(cp);
     let { stdout } = await exec(

@@ -1,7 +1,7 @@
 import similarity from 'similarity';
 
 const threshold = 0.72;
-const timeout = 120000;
+const timeout = 60000;
 const winScore = 3499;
 
 const handler = {

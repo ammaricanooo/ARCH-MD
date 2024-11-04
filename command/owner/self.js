@@ -8,7 +8,7 @@ export default {
 
     run: async (m) => {
         try {
-            global.db.data.system.self = true;
+            global.db.data.settings.self = true;
             m.reply("Success self bot, now bot only can use by owner!!");
         } catch (err) {
             m.reply("Sorry there have some error");

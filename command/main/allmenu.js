@@ -8,6 +8,13 @@ export default {
 
     run: async (m, { conn, text, args, isPrem, command }) => {
         //your script code
+        // const number = m.args[0].replace("@", "");
+        const user = `${m.sender.split('@')[0]}@s.whatsapp.net`;
+        console.log(user)
+        let prem = global.db.data.users[user].premium
+        let balance = global.db.data.users[user].balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+        let level = global.db.data.users[user].level
         const messages = `Halo @${m.sender.split('@')[0]}👋
 ${ucapan}
 Prefix : 「 ${m.prefix} 」
@@ -16,6 +23,14 @@ Prefix : 「 ${m.prefix} 」
 │• *Database* : MongoDB
 │• *Library* : WhiskeySockets/Baileys
 │• *Domain* : www.ammaricano.my.id
+└────
+
+┌─〔 *User Info* 〕
+│• *Name* : ${m.pushName}
+│• *Limit* : ∞
+│• *Balance* : ${balance}
+│• *Level* : ${level}
+│• *Premium* : ${prem}
 └────
 
 ┌─〔 *Group-Chat* 〕
@@ -85,6 +100,9 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}ytmp3 <url>
 │• ${m.prefix}lyrics <title>
 └────
+┌─〔 *NSFW* 〕
+│• ${m.prefix}neko ⓟ
+└────
 
 ┌─〔 *Random* 〕
 │• ${m.prefix}akira
@@ -118,6 +136,29 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}ssweb <url>
 │• ${m.prefix}tourl <gambar> (*Perbaikan*)
 │• ${m.prefix}upsclae/hd <gambar>
+└────
+
+┌─〔 *Owner* 〕
+│• ${m.prefix}addprem
+│• ${m.prefix}backup
+│• ${m.prefix}banchat
+│• ${m.prefix}block
+│• ${m.prefix}creategc
+│• ${m.prefix}getcmd
+│• ${m.prefix}getfile
+│• ${m.prefix}leave
+│• ${m.prefix}listprem
+│• ${m.prefix}public
+│• ${m.prefix}react
+│• ${m.prefix}savecmd
+│• ${m.prefix}savefile
+│• ${m.prefix}self
+│• ${m.prefix}sendplugins
+│• ${m.prefix}shutdown
+│• ${m.prefix}stickcmd
+│• ${m.prefix}test
+│• ${m.prefix}unbanchat
+│• ${m.prefix}unblock
 └────
 `
 let name = await conn.getName(m.sender)

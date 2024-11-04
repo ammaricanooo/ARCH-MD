@@ -5,7 +5,7 @@ export default {
 
   group: true,
   owner: true,
-  // admin: true,
+  admin: true,
 
   run: async (m) => {
     if (m.isOwner == true) {

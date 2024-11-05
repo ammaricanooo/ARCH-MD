@@ -96,7 +96,7 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}mediafire <url> (*Perbaikan*)
 │• ${m.prefix}tikdl/tiktok <url> 
 │• ${m.prefix}twitter <url> (*Perbaikan*)
-│• ${m.prefix}play <url> (*Perbaikan*)
+│• ${m.prefix}play <title>
 │• ${m.prefix}ytmp4 <url> 
 │• ${m.prefix}ytmp3 <url>
 │• ${m.prefix}lyrics <title>
@@ -187,6 +187,7 @@ let fkon = {
               contextInfo: {
                 mentionedJid: [m.sender],
                 externalAdReply: {
+                  showAdAttribution: true,
                   title: global.wm,
                   mediaType: 1,
                   previewType: 0,
@@ -197,6 +198,6 @@ let fkon = {
                 }
               }, mentions: [m.sender]
             }
-          }, { quoted: fkon });
+          }, { quoted: m });
     },
 };

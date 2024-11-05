@@ -67,7 +67,6 @@ async function start() {
   const conn = baileys.default({
     logger,
     printQRInTerminal: false,
-    version: [2, 3000, 1015901307],
     auth: {
       creds: state.creds,
       keys: baileys.makeCacheableSignalKeyStore(
@@ -105,21 +104,6 @@ async function start() {
 
     if (!!global.pairingNumber) {
       phoneNumber = global.pairingNumber.replace(/[^0-9]/g, "");
-
-      if (
-        !Object.keys(baileys.PHONENUMBER_MCC).some((v) =>
-          phoneNumber.startsWith(v),
-        )
-      ) {
-        console.log(
-          chalk.bgBlack(
-            chalk.redBright(
-              "Start with your country's WhatsApp code, Example : 62xxx",
-            ),
-          ),
-        );
-        process.exit(0);
-      }
     } else {
       phoneNumber = await question(
         chalk.bgBlack(chalk.greenBright("Please type your WhatsApp number : ")),
@@ -250,22 +234,22 @@ async function start() {
   });
 
   // nambah perubahan grup ke store
-  // conn.ev.on("groups.update", (updates) => {
-  //   for (const update of updates) {
-  //     const id = update.id;
-  //     if (store.groupMetadata[id]) {
-  //       store.groupMetadata[id] = {
-  //         ...(store.groupMetadata[id] || {}),
-  //         ...(update || {}),
-  //       };
-  //     }
-  //   }
-  // });
+  conn.ev.on("groups.update", (updates) => {
+    for (const update of updates) {
+      const id = update.id;
+      if (store.groupMetadata[id]) {
+        store.groupMetadata[id] = {
+          ...(store.groupMetadata[id] || {}),
+          ...(update || {}),
+        };
+      }
+    }
+  });
 
   conn.ev.on("messages.upsert", async (message) => {
     if (!message.messages) return;
 
-    const m = await Serialize(conn, message.messages[0], store);
+    const m = await Serialize(conn, message.messages[0]);
 
     if (store.groupMetadata && Object.keys(store.groupMetadata).length === 0)
       store.groupMetadata = await client.groupFetchAllParticipating();
@@ -281,11 +265,9 @@ async function start() {
     ).participantsUpdate(message);
   });
 
-  
-  // conn.ev.on("groups.update", async (update) => {
-  //   await (await import(`./handler.js?v=${Date.now()}`)).groupsUpdate(update);
-  // });
-
+  conn.ev.on("groups.update", async (update) => {
+    await (await import(`./handler.js?v=${Date.now()}`)).groupsUpdate(update);
+  });
 
   conn.ev.on("call", async (json) => {
     await (await import(`./handler.js?v=${Date.now()}`)).rejectCall(json);

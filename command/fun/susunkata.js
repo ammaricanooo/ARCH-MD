@@ -148,7 +148,7 @@ Type *nyerah* to surrender`.trim();
             clearTimeout(conn.susunkata[id].timeout);
             await conn.sendQuick(
                 m.chat,
-                `Selamat @${m.sender.split('@')[0]} 🎉 Jawaban kamu benar!
+                `Selamat *${m.pushName}* 🎉 Jawaban kamu benar!
 
 balance kamu bertambah sebesar: ${json.winScore} dan limit kamu juga bertambah sebesar: 5 limit!
 

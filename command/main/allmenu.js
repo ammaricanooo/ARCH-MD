@@ -34,16 +34,17 @@ Prefix : 「 ${m.prefix} 」
 └────
 
 ┌─〔 *Group-Chat* 〕
-│• ${m.prefix}group <open/close>
-│• ${m.prefix}linkgc/linkgrup
 │• ${m.prefix}add <number>
-│• ${m.prefix}kick <tag member>
-│• ${m.prefix}hidetag/totag/tag <text>
-│• ${m.prefix}leave
-│• ${m.prefix}promote <tag member>
-│• ${m.prefix}demote <tag admin>
-│• ${m.prefix}setnamegc <text>
 │• ${m.prefix}afk <reason>
+│• ${m.prefix}demote <tag admin>
+│• ${m.prefix}group <open/close>
+│• ${m.prefix}hidetag/totag/tag <text>
+│• ${m.prefix}kick <tag member>
+│• ${m.prefix}leave
+│• ${m.prefix}linkgc/linkgrup
+│• ${m.prefix}promote <tag member>
+│• ${m.prefix}setnamegc <text>
+│• ${m.prefix}tagall
 └────
 
 ┌─〔 *Artificial Intelegents* 〕
@@ -100,6 +101,7 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}ytmp3 <url>
 │• ${m.prefix}lyrics <title>
 └────
+
 ┌─〔 *NSFW* 〕
 │• ${m.prefix}neko ⓟ
 └────
@@ -139,6 +141,7 @@ Prefix : 「 ${m.prefix} 」
 └────
 
 ┌─〔 *Owner* 〕
+│• ${m.prefix}addbalance
 │• ${m.prefix}addprem
 │• ${m.prefix}backup
 │• ${m.prefix}banchat
@@ -194,6 +197,6 @@ let fkon = {
                 }
               }, mentions: [m.sender]
             }
-          }, { quoted: m });
+          }, { quoted: fkon });
     },
 };

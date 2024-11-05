@@ -5,8 +5,6 @@ let handler = {
     group: true,
     run: async (m) => {
         let user = global.db.data.users[m.sender]
-        if (!user.autolevelup)
-            return !0
         let users = Object.entries(global.db.data.users).map(([key, value]) => {
             return { ...value, jid: key }
         })
@@ -31,7 +29,10 @@ let handler = {
                 user.role = global.db.data.users[m.sender].role
                 {
                     let tag = `@${m.sender.replace(/@.+/, '')}`
-                    conn.sendFile(m.chat, logo, 'Thumb.jpg', `◪ *Name:* ${tag}\n├◆ *Role:* ${user.role}\n├◆ *Exp:* ${exp} xp\n╰◆ *Level:* ${before} ➠ ${user.level}\n`.trim(), m)
+                    m.reply(`
+Selamat, anda telah naik level!
+*${before}* -> *${user.level}*
+	`.trim())
                 }
             }
         }

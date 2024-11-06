@@ -171,19 +171,19 @@ Prefix : 「 ${m.prefix} 」
 `
 let name = await conn.getName(m.sender)
 let fkon = {
-    key: {
-      fromMe: false,
-      participant: `${m.sender.split`@`[0]}@s.whatsapp.net`,
-      ...(m.chat ? { remoteJid: '16500000000@s.whatsapp.net' } : {})
-    },
-    message: {
-      contactMessage: {
-        displayName: `${name}`,
-        vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
-        verified: true
-      }
+  key: {
+    fromMe: true,
+    participant: `${m.sender.split`@`[0]}@s.whatsapp.net`,
+    ...(m.chat ? { remoteJid: '16500000000@s.whatsapp.net' } : {})
+  },
+  message: {
+    contactMessage: {
+      displayName: `${name}`,
+      vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+      verified: true
     }
-  };
+  }
+};
 
         // m.reply(`${messages}`)
         conn.relayMessage(m.chat, {
@@ -203,6 +203,6 @@ let fkon = {
                 }
               }, mentions: [m.sender]
             }
-          }, { quoted: m });
+          }, { quoted: fkon });
     },
 };

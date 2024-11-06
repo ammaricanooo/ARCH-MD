@@ -126,6 +126,11 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}kisahnabi <name>
 └────
 
+┌─〔 *Search* 〕
+│• ${m.prefix}chord <title>
+│• ${m.prefix}pint <title>
+└────
+
 ┌─〔 *Stalker* 〕
 │• ${m.prefix}ghs <url>
 │• ${m.prefix}igs <username>

@@ -1,8 +1,8 @@
 import axios from "axios"
 export default {
-    command: ["chord", "chordgitar", "chordmusic"],
-    description: "Searh a music chord",
-    name: "chord",
+    command: ["pint", "pin", "pintdl", "pinterest"],
+    description: "Searh a picture from pinterest",
+    name: "pint",
     tags: "search",
 
     loading: true,
@@ -10,12 +10,12 @@ export default {
     run: async (m, { text }) => {
         if (!m.args[0]) {
             setTimeout(() => {
-                m.reply(`Example: ${m.prefix + m.command} Untuk Perempuan Yang Sedang Dalam Pelukan`)
+                m.reply(`Example: ${m.prefix + m.command} moon`)
             }, 1000)
         } else {
             const title = text
 
-            const apiUrl = `https://api.ryzendesu.vip/api/search/chord?query=${title}`
+            const apiUrl = `https://api.ryzendesu.vip/api/search/pinterest?query=${title}`
 
             let response
 
@@ -23,21 +23,19 @@ export default {
                 response = await axios.get(apiUrl);
             } catch (err) {
                 console.error(err)
-                m.reply("Judul tidak ditemukan!")
+                m.reply("Gambar tidak ditemukan!")
             }
 
             //const {, , , , , postsCount} = response.result;
 
-            const judul = response.data.title.replace("&#8211;", "-");
-            const chord = response.data.chord;
+            let result = response.data;
 
-            const txt = `[ ${judul || "Unknown"} ]
-
-
-${chord || "Not Found"}`
+            result = result[Math.floor(Math.random() * result.length)];
+            let caption = "nih kak"
+            console.log(result)
 
             try {
-                await m.reply(txt);
+                await m.reply(result, { caption, mimetype: 'image/jpeg' });
             } catch (err) {
                 console.error(err)
                 m.reply("Judul tidak ditemukan!")

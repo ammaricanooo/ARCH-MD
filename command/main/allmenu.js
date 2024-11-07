@@ -72,6 +72,7 @@ Prefix : 「 ${m.prefix} 」
 
 ┌─〔 *Information* 〕
 │• ${m.prefix}bioskopnow
+│• ${m.prefix}jadwalsholat
 └────
 
 ┌─〔 *Maker & Convert* 〕

@@ -1,5 +1,5 @@
-let toMs = require("ms");
-let jimp = require("jimp");
+import ms from 'ms';
+import jimp from 'jimp';
 
 let thumb1 =
     "https://user-images.githubusercontent.com/72728486/235344562-4677d2ad-48ee-419d-883f-e0ca9ba1c7b8.jpg";

@@ -16,11 +16,10 @@ export default {
 
         // Pencarian video berdasarkan query text
         const search = await youtubeSearch(text);
-        console.log(search)
         const vid = search.video[Math.floor(Math.random() * search.video.length)];
         if (!vid) throw 'Video not found, try another title';
 
-        const { title, thumbnail, timestamp, views, ago, url } = vid;
+        const { title, thumbnail, durationH, view, publishedTime, url } = vid;
 
         // Mengirim pesan awal dengan thumbnail
         await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: 'Please wait...' }, { quoted: m });
@@ -29,6 +28,7 @@ export default {
             // Mendapatkan URL audio menggunakan API ryzendesu
             const response = await axios.get(`https://api.ryzendesu.vip/api/downloader/ytmp3?url=${encodeURIComponent(url)}`);
             const downloadUrl = response.data.url;
+            console.log(downloadUrl)
 
             if (!downloadUrl) throw new Error('Audio URL not found');
 
@@ -54,7 +54,7 @@ export default {
                     },
                     mimetype: 'audio/mpeg',
                     fileName: `${title}.mp3`,
-                    caption: `Title: ${title}\nLength: ${timestamp}\nViews: ${views}\nUploaded: ${ago}`,
+                    caption: `Title: ${title}\nLength: ${durationH}\nViews: ${view}\nUploaded: ${publishedTime}`,
                     contextInfo: {
                         externalAdReply: {
                             showAdAttribution: true,

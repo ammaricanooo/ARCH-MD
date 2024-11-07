@@ -44,7 +44,7 @@ const {
     run_vote,
     run_malam,
     run_pagi
-} = import ('../../system/lib/werewolf.js');
+} = import ('/home/user/ARCH-MD/system/lib/warewolf.js');
 
 
 
@@ -398,3 +398,5 @@ let thumb =
     
     }
 }
+
+export default handler

@@ -70,6 +70,10 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}tebaklirik
 └────
 
+┌─〔 *Information* 〕
+│• ${m.prefix}bioskopnow
+└────
+
 ┌─〔 *Maker & Convert* 〕
 │• ${m.prefix}sticker (*Perbaikan*)
 └────
@@ -119,16 +123,20 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}doraemon
 │• ${m.prefix}elaina
 │• ${m.prefix}emilia
+│• ${m.prefix}kataanime
 └────
 
 ┌─〔 *Religi* 〕
 │• ${m.prefix}ayatkursi
 │• ${m.prefix}kisahnabi <name>
+│• ${m.prefix}qislam
 └────
 
 ┌─〔 *Search* 〕
 │• ${m.prefix}chord <title>
-│• ${m.prefix}pint <title>
+│• ${m.prefix}google <query>
+│• ${m.prefix}pint <query>
+│• ${m.prefix}yts <title>
 └────
 
 ┌─〔 *Stalker* 〕
@@ -197,7 +205,7 @@ let fkon = {
                   mediaType: 1,
                   previewType: 0,
                   renderLargerThumbnail: true,
-                  thumbnailUrl: 'https://8030.us.kg/file/QhKG9flPdkH8.png',
+                  thumbnailUrl: 'https://cdn.arifzyn.tech/f/9k2rxo6w.jpg',
                   sourceUrl: global.link,
                   body: "Copyright © Ammar 2024 - All Right Reserved",
                 }

@@ -12975,7 +12975,7 @@
       "limit": 150,
       "glimit": 20,
       "balance": 100000000199809310,
-      "exp": 22708,
+      "exp": 22756,
       "level": 47,
       "hit": 0,
       "lastclaim": 0,
@@ -21095,7 +21095,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-      "exp": 188,
+      "exp": 190,
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -22243,7 +22243,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": -5000,
-      "exp": 247,
+      "exp": 255,
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -50362,10 +50362,10 @@
       "lastSuccess": 1729482478386
     },
     "/home/user/ARCH-MD/command/wattpad/wattpadSearch.js": {
-      "total": 7833,
-      "success": 7833,
-      "last": 1730946158652,
-      "lastSuccess": 1730946158652
+      "total": 7842,
+      "success": 7842,
+      "last": 1730951713760,
+      "lastSuccess": 1730951713760
     },
     "/home/user/ARCH-MD/command/fun/siapakahaku.js": {
       "total": 6,

@@ -101,6 +101,7 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}tikdl/tiktok <url> 
 │• ${m.prefix}twitter <url> (*Perbaikan*)
 │• ${m.prefix}play <title>
+│• ${m.prefix}sptdl <url>
 │• ${m.prefix}ytmp4 <url> 
 │• ${m.prefix}ytmp3 <url>
 │• ${m.prefix}lyrics <title>

@@ -8,11 +8,12 @@ export default {
     run: async (m, { conn, text, usedPrefix, command }) => {
         let user;
         if (m.isGroup) {
-            user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
+            user = m.mentionedJid ? m.mentionedJid : m.quoted ? m.quoted.sender : false;
         } else {
             user = text.split(' ')[0];
             user = user.replace('@', '') + '@s.whatsapp.net';
         }
+        console.log(user)
     
         let userData = db.data.users[user];
         if (!userData) throw `User not found!`;

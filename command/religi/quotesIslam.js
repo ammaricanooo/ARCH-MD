@@ -28,7 +28,7 @@ export default {
             'Rasa syukur tidak akan datang kepada orang yang tidak beriman dan tidak pernah kenyang',
             'Maafkan aku andai apa yang aku tulis dan aku share tentang ilmu agama tidak sesuai dengan coberku dan kehidupanku yang asli',
             'Kebanyakan manusia lebih senang menyalahkan orang lain daripada menyalahkan diri sendiri',
-            'Biarlah orang melihat penampilah kita biasa, tetapi luar biasa di mata Allah',
+            'Biarlah orang melihat penampilan kita biasa, tetapi luar biasa di mata Allah',
             'Bersyukurlah bila dalam penantianmu, kau tetap gigih dalam kesendirian, sebab artinya kau telah memuliakan jalan Allah',
             'Malu akan sebuah masalah itu boleh tapi jangan berlebihan sebab jika kita Yakin Pertolongan Allah itu sangatlah nyata',
             'Yakinlah bahwa ada do’a yang terus dipanjatkan kepada Allah yang tidak putus-putus dari orang tua kita agar kita senantiasa menjadi anak yang sholeh dan sholehah',

@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { uploadPomf } from '../lib/uploadImage.js'
+import { uploadPomf } from './../../system/lib/uploadImage.js'
 
 
 export default {

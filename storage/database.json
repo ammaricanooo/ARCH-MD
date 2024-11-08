@@ -49686,6 +49686,47 @@
         "id": "",
         "about": ""
       }
+    },
+    "6289617354862@s.whatsapp.net": {
+      "lastChat": 1731072919624,
+      "name": "Bubu Bima",
+      "banned": false,
+      "bannedReason": "",
+      "afk": -1,
+      "afkReason": "",
+      "age": 0,
+      "registered": false,
+      "regTime": -1,
+      "warn": 0,
+      "limit": 10,
+      "glimit": 20,
+      "balance": 0,
+      "exp": 100,
+      "level": 1,
+      "hit": 0,
+      "lastclaim": 0,
+      "grade": "Newbie",
+      "autolevelup": true,
+      "premium": false,
+      "premiumTime": 0,
+      "openai": {
+        "messages": [],
+        "chat": false,
+        "model": ""
+      },
+      "life": {
+        "name": "",
+        "gender": "",
+        "age": "",
+        "verified": false,
+        "waifu": "",
+        "exp": 0,
+        "lastkencan": 0,
+        "money": 0,
+        "gamepas": 0,
+        "id": "",
+        "about": ""
+      }
     }
   },
   "chats": {

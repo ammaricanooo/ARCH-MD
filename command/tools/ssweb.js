@@ -23,15 +23,15 @@ export default {
       response = await func.fetchJson(ApiUrl)
     } catch (err) {
       console.error(err)
-      m.reply(err)
+      m.reply('Terjadi kesalahan, pastikan web tidak di bokir di server indo atau coba lagi nanti')
     }
     
     const ssWeb = response.result
     
     try {
-      await m.reply(ssWeb, { caption: "Done Screenshot webside: " + webLink, mimetype: "image/jpeg"})
+      await m.reply(ssWeb, { caption: "Done Screenshot website: " + webLink, mimetype: "image/jpeg"})
     } catch (err) {
-      m.reply(err)
+      m.reply('Terjadi kesalahan, pastikan web tidak di bokir di server indo atau coba lagi nanti')
     }
   }
   }

@@ -1,5 +1,5 @@
 export default {
-    command: ["openai", "chatgpt", "ai"],
+    command: ["openai", "chatgpt", "ai", "gpt"],
     description: "Search some informasion using gpt4",
     name: "openai",
     tags: "ai",
@@ -7,7 +7,7 @@ export default {
     run: async (m, { text }) => {
         if (!text) m.reply(`try chat with ai/openai. \n\nexample: ${m.prefix + m.command} apa nama rumus kimia dari besi`)
         try {
-            const data = API("nyxs","/ai/gpt4", { text: text })
+            const data = API("ryzendesu","/api/ai/chatgpt", { text: text })
             let response
 
             console.log(data)
@@ -16,7 +16,7 @@ export default {
     
             console.log(response)
             
-            await m.reply(response.result)
+            await m.reply(response.response)
         } catch (error) {
             console.error(error);
             m.reply('Sorry, there seems to be an error: ' + error)

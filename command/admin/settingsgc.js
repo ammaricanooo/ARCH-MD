@@ -1,7 +1,8 @@
 export default {
     command: ["group", "gc", "grup"],
-    description: "set settings group",
-    name: "set name gc",
+    example: `Example: %p%cmd *close*`,
+    description: "set settings group (close/open)",
+    name: "group",
     tags: "admin",
 
     admin: true,

@@ -4,6 +4,7 @@ export default {
     name: "creategc",
     tags: "owner",
 
+    owner: true,
 
     run: async (m, { text }) => {
         if (!text) return m.reply(global.msg.noText)

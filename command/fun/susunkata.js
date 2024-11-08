@@ -1,7 +1,7 @@
 import similarity from 'similarity';
 
 const threshold = 0.92;
-const timeout = 10;
+const timeout = 60000;
 const winScore = 3499;
 
 const handler = {
@@ -92,9 +92,9 @@ const handler = {
 
         let caption = `[ SUSUN KATA ]
 
-• *Timeout :* 60 seconds
 • *Question :* ${json.soal}
 • *Tipe :* ${json.tipe}
+• *Timeout :* 60 seconds
 
 
 Reply to this message to answer the question
@@ -107,11 +107,12 @@ Type *nyerah* to surrender`.trim();
             winScore,
             timeout: setTimeout(() => {
                 if (conn.susunkata[susunkata_id]) {
-                    conn.reply(
-                        m.chat,
-                        `Waktu habis! Jawaban yang benar adalah: *${json.jawaban}*`,
-                        conn.susunkata[susunkata_id].msg
-                    );
+                    // conn.reply(
+                    //     m.chat,
+                    //     `Waktu habis! Jawaban yang benar adalah: *${json.jawaban}*`,
+                    //     conn.asahotak[asahotak_id].msg
+                    // );
+                    m.reply(`Waktu habis! Jawaban yang benar adalah: *${json.jawaban}*`,)
                     delete conn.susunkata[susunkata_id];
                 }
             }, timeout),
@@ -147,7 +148,9 @@ Type *nyerah* to surrender`.trim();
             clearTimeout(conn.susunkata[id].timeout);
             await conn.sendQuick(
                 m.chat,
-                `Selamat 🎉 Jawaban kamu benar!
+                `Selamat *${m.pushName}* 🎉 Jawaban kamu benar!
+
+balance kamu bertambah sebesar: ${json.winScore} dan limit kamu juga bertambah sebesar: 5 limit!
 
 
 Mau main lagi?`,

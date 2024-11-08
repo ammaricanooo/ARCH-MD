@@ -1,11 +1,12 @@
 export default {
     command: ['hidetag', 'ht', 'h', 'totag', 'tag'],
+    example: `Example: %p%cmd *text*`,
     description: 'Tag all member mentions',
     name: 'hidetag',
     tags: 'group',
 
     group: true,
-    admin: false,
+    admin: true,
 
     run: async (m, { conn }) => {
         const quoted = m.isQuoted ? m.quoted : m;

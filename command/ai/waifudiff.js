@@ -9,11 +9,11 @@ export default {
   run: async (m, { text, conn}) => {
     if (!text) {
       setTimeout(() => {
-        m.reply(`Input the query\n\nexample\n\n${ m.prefix + m.command } long hair`)
+        m.reply(`Input the query\n\nexample\n\n${ m.prefix + m.command } girl with long hair`)
       }, 1000)
     } else {
     const query = text
-    conn.reply(m.chat, { caption: "Nih kak..", image: { url: `https://api.ryzendesu.vip/api/ai/waifu-diff?prompt=${encodeURIComponent(query)}` } })
+    m.reply(`https://api.ryzendesu.vip/api/ai/waifu-diff?prompt=${encodeURIComponent(query)}`)
     }
   }
 }

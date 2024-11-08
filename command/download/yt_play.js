@@ -1,61 +1,91 @@
+import { youtubeSearch } from './../../system/lib/youtube.js'
+import fs from 'fs'
+import os from 'os'
+import axios from 'axios'
+
 export default {
     command: ["play", "ytplay"],
     description: "Download youtube audio using query",
     name: "play",
     tags: "download",
 
-    loading: false,
+    loading: true,
 
-    run: async (m, { text }) => {
-        const qy = text
-        const Apikeys = global.APIKeys.neoxr
-        const URLApi = global.APIs.neoxr
+    run: async (m, { conn, command, text, usedPrefix }) => {
+        if (!text) throw `Use example ${usedPrefix}${command} <search term>`;
 
-        if (!qy) {
-            await m.reply(`Example: ${ m.prefix + m.command } Doja - Central Cee`)
-        } else {
-            m.reply(global.msg.searching)
+        // Pencarian video berdasarkan query text
+        const search = await youtubeSearch(text);
+        const vid = search.video[Math.floor(Math.random() * search.video.length)];
+        if (!vid) throw 'Video not found, try another title';
 
-        const urlApi = `${URLApi + '/api/play?q=' + encodeURIComponent(qy) + '&apikey=' + Apikeys}`
+        const { title, thumbnail, durationH, view, publishedTime, url } = vid;
 
-        console.log(urlApi)
-
-        let response
+        // Mengirim pesan awal dengan thumbnail
+        await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: 'Please wait...' }, { quoted: m });
 
         try {
-            response = await func.fetchJson(urlApi)
+            // Mendapatkan URL audio menggunakan API ryzendesu
+            const response = await axios.get(`https://api.ryzendesu.vip/api/downloader/ytmp3?url=${encodeURIComponent(url)}`);
+            const downloadUrl = response.data.url;
+            console.log(downloadUrl)
+
+            if (!downloadUrl) throw new Error('Audio URL not found');
+
+            // Lokasi file sementara
+            const tmpDir = os.tmpdir();
+            const filePath = `${tmpDir}/${title}.mp3`;
+
+            // Mengunduh file audio dan menyimpannya di direktori sementara
+            const audioResponse = await axios({
+                method: 'get',
+                url: downloadUrl,
+                responseType: 'stream',
+            });
+
+            const writableStream = fs.createWriteStream(filePath);
+            audioResponse.data.pipe(writableStream);
+
+            writableStream.on('finish', async () => {
+                // Mengirim file audio
+                await conn.sendMessage(m.chat, {
+                    document: {
+                        url: filePath,
+                    },
+                    mimetype: 'audio/mpeg',
+                    fileName: `${title}.mp3`,
+                    caption: `Title: ${title}\nLength: ${durationH}\nViews: ${view}\nUploaded: ${publishedTime}`,
+                    contextInfo: {
+                        externalAdReply: {
+                            showAdAttribution: true,
+                            mediaType: 2,
+                            mediaUrl: url,
+                            title: title,
+                            body: 'Audio Download',
+                            sourceUrl: url,
+                            thumbnail: await (await conn.getFile(thumbnail)).data,
+                        },
+                    },
+                }, { quoted: m });
+
+                // Menghapus file setelah dikirim
+                fs.unlink(filePath, (err) => {
+                    if (err) {
+                        console.error(`Failed to delete audio file: ${err}`);
+                    } else {
+                        console.log(`Deleted audio file: ${filePath}`);
+                    }
+                });
+            });
+
+            writableStream.on('error', (err) => {
+                console.error(`Failed to write audio file: ${err}`);
+                m.reply('Failed to download audio');
+            });
         } catch (error) {
-            console.log(error)
-            m.reply("error", error)
+            console.error('Error:', error.message);
+            throw `Error: ${error.message}. Please check the URL and try again.`;
         }
 
-        if (response.status == false) throw 'Fetch Error/Failed'
-
-        const { title, channel, thumbnail, duration, views, publish } = response
-
-        let thumb = thumbnail
-
-        console.log(response.data)
-
-        let replyText = `
-title: ${title || "Unknown"}
-views: ${views || "Unknown"}
-duration: ${duration || "Unknown"}
-channel: ${channel || "Unknown"}
-publish: ${publish || "Unknown"}
-        `
-
-        const sendFile = await response.data.url
-
-        console.log(sendFile)
-
-        try {
-            m.reply( thumb,  { caption: replyText, mimetype: "image/jpeg" } )
-            m.reply( sendFile, { caption: "Done", mimetype: "audio/mpeg" })
-        } catch (err) {
-            m.reply("Error: " + err)
-            console.error(err);
-        }
     }
-    }
-    }
+}

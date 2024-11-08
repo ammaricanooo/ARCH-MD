@@ -2,7 +2,7 @@ import { bioskopNow } from '@bochilteam/scraper'
 
 export default {
     command: ["bioskopnow"],
-    description: "",
+    description: "Get the latest information on films currently showing in cinemas",
     name: "bioskopNow",
     tags: "information",
 

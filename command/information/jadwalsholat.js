@@ -2,7 +2,7 @@ import { jadwalsholat } from '@bochilteam/scraper'
 
 export default {
     command: ["jadwalsholat", "jadwalshalat", "jadwalsalat", "jadwalsolat"],
-    description: "",
+    description: "Get information about prayer schedules",
     name: "jadwalsholat",
     tags: "information",
 

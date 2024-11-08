@@ -1,4 +1,4 @@
-import { youtubeSearch } from '/home/user/ARCH-MD/system/lib/youtube.js'
+import { youtubeSearch } from './../../system/lib/youtube.js'
 
 export default {
     command: ["yts", "ytsearch", "searchyt"],

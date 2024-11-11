@@ -12975,7 +12975,7 @@
       "limit": 150,
       "glimit": 20,
       "balance": 100000000199784350,
-      "exp": 24290,
+      "exp": 24405,
       "level": 49,
       "hit": 0,
       "lastclaim": 0,
@@ -49027,7 +49027,7 @@
         "lastkencan": 0,
         "money": 0,
         "gamepas": 0,
-        "id": "",
+        "id": 0,
         "about": ""
       }
     },
@@ -49690,6 +49690,47 @@
     "6289617354862@s.whatsapp.net": {
       "lastChat": 1731072919624,
       "name": "Bubu Bima",
+      "banned": false,
+      "bannedReason": "",
+      "afk": -1,
+      "afkReason": "",
+      "age": 0,
+      "registered": false,
+      "regTime": -1,
+      "warn": 0,
+      "limit": 10,
+      "glimit": 20,
+      "balance": 0,
+      "exp": 100,
+      "level": 1,
+      "hit": 0,
+      "lastclaim": 0,
+      "grade": "Newbie",
+      "autolevelup": true,
+      "premium": false,
+      "premiumTime": 0,
+      "openai": {
+        "messages": [],
+        "chat": false,
+        "model": ""
+      },
+      "life": {
+        "name": "",
+        "gender": "",
+        "age": "",
+        "verified": false,
+        "waifu": "",
+        "exp": 0,
+        "lastkencan": 0,
+        "money": 0,
+        "gamepas": 0,
+        "id": 0,
+        "about": ""
+      }
+    },
+    "6282299656422@s.whatsapp.net": {
+      "lastChat": 1731074163558,
+      "name": "QQ Andini",
       "banned": false,
       "bannedReason": "",
       "afk": -1,
@@ -50562,10 +50603,10 @@
       "lastSuccess": 1729173058123
     },
     "C:\\Users\\naufal\\ARCH-MD\\command\\wattpad\\wattpadSearch.js": {
-      "total": 2153,
-      "success": 2153,
-      "last": 1731071673412,
-      "lastSuccess": 1731071673412
+      "total": 2157,
+      "success": 2157,
+      "last": 1731075958184,
+      "lastSuccess": 1731075958184
     },
     "/home/user/ARCH-MD/command/wattpad/wattpadSearch.js": {
       "total": 8139,
@@ -50628,10 +50669,10 @@
       "lastSuccess": 1731069494323
     },
     "C:\\Users\\naufal\\ARCH-MD\\command\\utility\\_antispam.js": {
-      "total": 44,
-      "success": 44,
-      "last": 1731071589680,
-      "lastSuccess": 1731071589680
+      "total": 64,
+      "success": 64,
+      "last": 1731076497821,
+      "lastSuccess": 1731076497821
     }
   },
   "msgs": {},

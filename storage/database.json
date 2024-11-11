@@ -12974,13 +12974,8 @@
       "warn": 0,
       "limit": 150,
       "glimit": 20,
-<<<<<<< HEAD
       "balance": 100000000199784350,
       "exp": 24290,
-=======
-      "balance": 100000000199809310,
-      "exp": 23328,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 49,
       "hit": 0,
       "lastclaim": 0,
@@ -13146,11 +13141,7 @@
       "limit": 200,
       "glimit": 20,
       "balance": 132962,
-<<<<<<< HEAD
       "exp": 4624,
-=======
-      "exp": 4619,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -13191,11 +13182,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 259,
-=======
-      "exp": 255,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -14094,17 +14081,10 @@
       "registered": false,
       "regTime": -1,
       "warn": 0,
-<<<<<<< HEAD
       "limit": 190,
       "glimit": 20,
       "balance": 100964,
       "exp": 4329,
-=======
-      "limit": 145,
-      "glimit": 20,
-      "balance": 94473,
-      "exp": 3697,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -18365,17 +18345,10 @@
       "registered": false,
       "regTime": -1,
       "warn": 0,
-<<<<<<< HEAD
       "limit": 30,
       "glimit": 20,
       "balance": 8996,
       "exp": 3997,
-=======
-      "limit": 25,
-      "glimit": 20,
-      "balance": 5497,
-      "exp": 3142,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -19072,11 +19045,7 @@
       "limit": 100,
       "glimit": 20,
       "balance": 62982,
-<<<<<<< HEAD
       "exp": 1324,
-=======
-      "exp": 1190,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 13,
       "hit": 0,
       "lastclaim": 0,
@@ -19609,11 +19578,7 @@
       "limit": 45,
       "glimit": 20,
       "balance": 24493,
-<<<<<<< HEAD
       "exp": 1613,
-=======
-      "exp": 1414,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -20840,17 +20805,10 @@
       "registered": false,
       "regTime": -1,
       "warn": 0,
-<<<<<<< HEAD
       "limit": 40,
       "glimit": 20,
       "balance": 20994,
       "exp": 811,
-=======
-      "limit": 30,
-      "glimit": 20,
-      "balance": 13996,
-      "exp": 543,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -21752,11 +21710,7 @@
       "limit": 45,
       "glimit": 20,
       "balance": 24493,
-<<<<<<< HEAD
       "exp": 1319,
-=======
-      "exp": 1036,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -24052,11 +24006,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 927,
-=======
-      "exp": 910,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -24097,11 +24047,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 700,
-=======
-      "exp": 692,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -29103,11 +29049,7 @@
       "limit": 140,
       "glimit": 20,
       "balance": 90974,
-<<<<<<< HEAD
       "exp": 1873,
-=======
-      "exp": 1863,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -29353,11 +29295,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 183,
-=======
-      "exp": 176,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -30053,13 +29991,8 @@
       "warn": 0,
       "limit": 10,
       "glimit": 20,
-<<<<<<< HEAD
       "balance": -20000,
       "exp": 167,
-=======
-      "balance": 0,
-      "exp": 137,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -40677,11 +40610,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 6874,
-=======
-      "exp": 6601,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -41618,11 +41547,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 212,
-=======
-      "exp": 197,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -48833,11 +48758,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 162,
-=======
-      "exp": 152,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -49533,11 +49454,7 @@
       "limit": 10,
       "glimit": 20,
       "balance": 0,
-<<<<<<< HEAD
       "exp": 254,
-=======
-      "exp": 246,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "level": 1,
       "hit": 0,
       "lastclaim": 0,
@@ -49626,7 +49543,6 @@
       "lastclaim": 0,
       "grade": "Newbie",
       "autolevelup": true,
-<<<<<<< HEAD
       "premium": false,
       "premiumTime": 0,
       "openai": {
@@ -49791,8 +49707,6 @@
       "lastclaim": 0,
       "grade": "Newbie",
       "autolevelup": true,
-=======
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "premium": false,
       "premiumTime": 0,
       "openai": {
@@ -50454,11 +50368,7 @@
       "antidelete": true,
       "antilink": false,
       "antispam": false,
-<<<<<<< HEAD
       "antitoxic": false,
-=======
-      "antitoxic": true,
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
       "detect": true,
       "expired": 0,
       "isBanned": false,
@@ -50468,7 +50378,6 @@
       "welcome": true,
       "antiBadword": true,
       "antiToxic": false
-<<<<<<< HEAD
     },
     "120363184487029334@g.us": {
       "antibot": false,
@@ -50511,8 +50420,6 @@
       "simi": false,
       "viewonce": false,
       "welcome": true
-=======
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
     }
   },
   "stats": {
@@ -50655,17 +50562,10 @@
       "lastSuccess": 1729173058123
     },
     "C:\\Users\\naufal\\ARCH-MD\\command\\wattpad\\wattpadSearch.js": {
-<<<<<<< HEAD
       "total": 2153,
       "success": 2153,
       "last": 1731071673412,
       "lastSuccess": 1731071673412
-=======
-      "total": 1660,
-      "success": 1660,
-      "last": 1729482478386,
-      "lastSuccess": 1729482478386
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
     },
     "/home/user/ARCH-MD/command/wattpad/wattpadSearch.js": {
       "total": 8139,
@@ -50714,7 +50614,6 @@
       "success": 2,
       "last": 1730962457922,
       "lastSuccess": 1730962457922
-<<<<<<< HEAD
     },
     "C:\\Users\\naufal\\ARCH-MD\\command\\tools\\upscale.js": {
       "total": 79,
@@ -50733,8 +50632,6 @@
       "success": 44,
       "last": 1731071589680,
       "lastSuccess": 1731071589680
-=======
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
     }
   },
   "msgs": {},

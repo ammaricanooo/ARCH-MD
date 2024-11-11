@@ -61,7 +61,6 @@ async function start() {
     global.db = database.db;
     await database.loadDatabase();
 
-<<<<<<< HEAD
     const msgRetryCounterCache = new NodeCache();
     const { state, saveCreds } =
         await baileys.useMultiFileAuthState("./system/session");
@@ -81,56 +80,6 @@ async function start() {
         getMessage: async (key) => {
             let jid = baileys.jidNormalizedUser(key.remoteJid);
             let msg = await store.loadMessage(jid, key.id);
-=======
-  const msgRetryCounterCache = new NodeCache();
-  const { state, saveCreds } =
-    await baileys.useMultiFileAuthState("./system/session");
-  const conn = baileys.default({
-    logger,
-    printQRInTerminal: false,
-    auth: {
-      creds: state.creds,
-      keys: baileys.makeCacheableSignalKeyStore(
-        state.keys,
-        pino({ level: "fatal" }).child({ level: "fatal" }),
-      ),
-    },
-    browser: ["Ubuntu", "Chrome", "20.0.04"],
-    markOnlineOnConnect: true,
-    generateHighQualityLinkPreview: true,
-    getMessage: async (key) => {
-      let jid = baileys.jidNormalizedUser(key.remoteJid);
-      let msg = await store.loadMessage(jid, key.id);
-
-      return msg?.message || "";
-    },
-    msgRetryCounterCache,
-    defaultQueryTimeoutMs: undefined,
-  });
-
-  store.bind(conn.ev);
-
-  await Client({ conn, store });
-  global.conn = conn;
-
-  loadPluginFiles(pluginFolder, pluginFilter, {
-    logger: conn.logger,
-    recursiveRead: true,
-  })
-    .then((_) => console.log(Object.keys(plugins)))
-    .catch(console.error);
-
-  if (!conn.authState.creds.registered) {
-    let phoneNumber;
-
-    if (!!global.pairingNumber) {
-      phoneNumber = global.pairingNumber.replace(/[^0-9]/g, "");
-    } else {
-      phoneNumber = await question(
-        chalk.bgBlack(chalk.greenBright("Please type your WhatsApp number : ")),
-      );
-      phoneNumber = phoneNumber.replace(/[^0-9]/g, "");
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
 
             return msg?.message || "";
         },
@@ -197,24 +146,9 @@ async function start() {
     conn.ev.on("connection.update", async (update) => {
         const { lastDisconnect, connection, qr } = update;
 
-<<<<<<< HEAD
         if (connection) conn.logger.info(`Connection Status : ${connection}`);
         if (connection === "close") {
             let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
-=======
-  // nambah perubahan grup ke store
-  conn.ev.on("groups.update", (updates) => {
-    for (const update of updates) {
-      const id = update.id;
-      if (store.groupMetadata[id]) {
-        store.groupMetadata[id] = {
-          ...(store.groupMetadata[id] || {}),
-          ...(update || {}),
-        };
-      }
-    }
-  });
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
 
             if (reason === baileys.DisconnectReason.badSession) {
                 console.log("File Sesi Rusak, Harap Hapus Sesi dan Pindai Lagi");
@@ -248,14 +182,10 @@ async function start() {
             }
         }
 
-<<<<<<< HEAD
         if (connection === "open") {
             conn.logger.info("Connecting Success...");
         }
     });
-=======
-    const m = await Serialize(conn, message.messages[0]);
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
 
     conn.ev.on("creds.update", saveCreds);
 
@@ -286,7 +216,6 @@ async function start() {
                     );
                 }
 
-<<<<<<< HEAD
                 store.contacts[id] = {
                     ...(store.contacts?.[id] || {}),
                     ...(contact || {}),
@@ -303,11 +232,6 @@ async function start() {
                 store.contacts[id] = { ...(contact || {}), isContact: true };
         }
     });
-=======
-  conn.ev.on("groups.update", async (update) => {
-    await (await import(`./handler.js?v=${Date.now()}`)).groupsUpdate(update);
-  });
->>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
 
     // nambah perubahan grup ke store
     conn.ev.on("groups.update", (updates) => {

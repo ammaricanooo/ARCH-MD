@@ -12,7 +12,11 @@ global.packname = "Created Sticker By";
 global.link = "https://github.com/4marr"; //your github (if you have)
 
 global.owner = ["62895702633030"]; // your number owner
+<<<<<<< HEAD
 global.pairingNumber = "62895702633030"; //your bot number
+=======
+global.pairingNumber = "6283866712646"; //your bot number
+>>>>>>> 1a3ffb5f5c6c89992362446c4915f5e182d65179
 
 global.prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|/~!?@#%^&.©^]/i;
 global.thumbnail = fs.readFileSync("./storage/media/images.jpg");

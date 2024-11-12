@@ -173,7 +173,7 @@ export default class Database {
                 if (!isBoolean(chat.isBanned)) chat.isBanned = false;
                 if (!isBoolean(chat.nsfw)) chat.nsfw = false;
                 if (!isBoolean(chat.simi)) chat.simi = false;
-                if (!isBoolean(chat.viewOnce)) chat.viewonce = false;
+                if (!isBoolean(chat.viewonce)) chat.viewonce = false;
                 if (!isBoolean(chat.welcome)) chat.welcome = true;
             } else {
                 db.data.chats[m.chat] = {

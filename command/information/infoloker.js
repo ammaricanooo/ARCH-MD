@@ -18,7 +18,7 @@ export default {
                 return `🔍 *[ RESULT ${index + 1} ]*
 📰 *Title:* ${item.job || 'Tidak diketahui'}
 🏢 *Perusahaan:* ${item.perusahaan || 'Tidak diketahui'}
-📍 *Daerah:* ${item.daerah || 'Tidak diketahui'}
+📍 *Daerah:* ${item.daerah || 'Tidak diketahui'}${item.provinsi}
 🔗 *Link Detail:* ${item.link_Detail || 'Tidak diketahui'}
 ⬆️ *Upload:* ${item.upload || 'Tidak diketahui'}
         `;
@@ -39,13 +39,14 @@ async function infoloker(query) {
     const format = [];
 
     $('article').each((a, article) => {
-        const job = $(article).find('h1 a div').text();
-        const perusahaan = $(article).find('span').eq(0).text();
-        const daerah = $(article).find('span span').text();
-        const link_Detail = 'https://www.jobstreet.co.id' + $(article).find('h1 a').attr('href');
-        const upload = $(article).find('div > time > span').text();
+        const job = $(article).find('h3 a').text();
+        const perusahaan = $(article).find('span').eq(0).text().replace(/di /g, '');
+        const daerah = $(article).find('span span').eq(1).text().replace(/di /g, '');
+        const provinsi = $(article).find('span span').eq(2).text().replace(/di /g, '');
+        const link_Detail = 'https://www.jobstreet.co.id' + $(article).find('h3 a').attr('href');
+        const upload = $(article).find('div > div > span').eq(3).text();
 
-        format.push({ job, perusahaan, daerah, upload, link_Detail });
+        format.push({ job, perusahaan, daerah, provinsi, upload, link_Detail });
     });
 
     return format;

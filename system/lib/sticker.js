@@ -114,7 +114,7 @@ async function writeExif(media, metadata) {
         const opt = {
             packId: metadata?.packId ? metadata.packId : "https://nhentai.net",
             packName: metadata?.packName ? metadata.packName : "Stiker dibuat oleh :",
-            packPublish: metadata?.packPublish ? metadata.packPublish : "Arifzyn",
+            packPublish: metadata?.packPublish ? metadata.packPublish : "Ammar",
             packEmail: metadata?.packEmail
                 ? metadata.packEmail
                 : "arifzyn906@gmail.com",

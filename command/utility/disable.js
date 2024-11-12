@@ -1,20 +1,54 @@
 export default {
-  command: ["disable"],
-  description: "Make bot only owner can access",
-  name: "disable",
-  tags: "owner",
+    command: ["disable", "dis"],
+    description: "Make bot only owner can access",
+    name: "disable",
+    tags: "owner",
 
-  owner: true,
+    admin: true,
 
-  run: async (m) => {
-    let chat = global.db.data.chats[m.chat]
-    try {
-      chat.antitoxic = false;
-      console.log(chat.antitoxic)
-          m.reply("Success disable!!");
-      } catch (err) {
-          m.reply("Sorry there have some error");
-          console.log(err);
-      }
-  }
+    run: async (m, { text }) => {
+        let chat = global.db.data.chats[m.chat]
+        try {
+
+            if (text == "antibot") {
+                chat.antibot = false;
+                console.log(chat.antibot)
+                m.reply("Success disable anti bot!!");
+            } else if (text == "antidelete") {
+                chat.antidelete = false;
+                console.log(chat.antidelete)
+                m.reply("Success disable anti delete!!");
+            } else if (text == "antilink") {
+                chat.antilink = false;
+                console.log(chat.antilink)
+                m.reply("Success disable anti link!!");
+            } else if (text == "antispam") {
+                chat.antispam = false;
+                console.log(chat.antispam)
+                m.reply("Success disable anti spam!!");
+            } else if (text == "antitoxic") {
+                chat.antitoxic = false;
+                console.log(chat.antitoxic)
+                m.reply("Success disable anti toxic!!");
+            } else if (text == "nsfw") {
+                chat.nsfw = false;
+                console.log(chat.nsfw)
+                m.reply("Success disable nsfw!!");
+            } else if (text == "simi") {
+                chat.simi = false;
+                console.log(chat.simi)
+                m.reply("Success disable simi!!");
+            } else if (text == "viewonce") {
+                chat.viewonce = false;
+                console.log(chat.viewonce)
+                m.reply("Success disable anti view once!!");
+            } else {
+                m.reply("Sorry there have some error");
+            }
+
+        } catch (err) {
+            m.reply("Sorry there have some error");
+            console.log(err);
+        }
+    }
 }

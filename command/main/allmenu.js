@@ -39,10 +39,12 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}demote <tag admin>
 │• ${m.prefix}group <open/close>
 │• ${m.prefix}hidetag/totag/tag <text>
+│• ${m.prefix}infogrup
 │• ${m.prefix}kick <tag member>
 │• ${m.prefix}leave
 │• ${m.prefix}linkgc/linkgrup
 │• ${m.prefix}promote <tag member>
+│• ${m.prefix}setdescgc <text>
 │• ${m.prefix}setnamegc <text>
 │• ${m.prefix}tagall
 └────
@@ -58,6 +60,7 @@ Prefix : 「 ${m.prefix} 」
 
 ┌─〔 *Fun* 〕
 │• ${m.prefix}wangy <name>
+│• ${m.prefix}apakah <text>
 └────
 
 ┌─〔 *Games* 〕
@@ -72,7 +75,8 @@ Prefix : 「 ${m.prefix} 」
 
 ┌─〔 *Information* 〕
 │• ${m.prefix}bioskopnow
-│• ${m.prefix}jadwalsholat
+│• ${m.prefix}infoloker <query>
+│• ${m.prefix}jadwalsholat <city>
 └────
 
 ┌─〔 *Maker & Convert* 〕
@@ -80,7 +84,7 @@ Prefix : 「 ${m.prefix} 」
 └────
 
 ┌─〔 *Main* 〕
-│• ${m.prefix}allmenu 
+│• ${m.prefix}allmenu
 │• ${m.prefix}creator
 │• ${m.prefix}delete <tag msg bot>
 │• ${m.prefix}donasi
@@ -99,11 +103,11 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}gdr <url> (*Perbaikan*)
 │• ${m.prefix}igdl <url> (*Perbaikan*)
 │• ${m.prefix}mediafire <url> (*Perbaikan*)
-│• ${m.prefix}tikdl/tiktok <url> 
+│• ${m.prefix}tikdl/tiktok <url>
 │• ${m.prefix}twitter <url> (*Perbaikan*)
 │• ${m.prefix}play <title>
 │• ${m.prefix}sptdl <url>
-│• ${m.prefix}ytmp4 <url> 
+│• ${m.prefix}ytmp4 <url>
 │• ${m.prefix}ytmp3 <url>
 │• ${m.prefix}lyrics <title>
 └────
@@ -179,40 +183,40 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}unblock
 └────
 `
-let name = await conn.getName(m.sender)
-let fkon = {
-  key: {
-    fromMe: true,
-    participant: `${m.sender.split`@`[0]}@s.whatsapp.net`,
-    ...(m.chat ? { remoteJid: '16500000000@s.whatsapp.net' } : {})
-  },
-  message: {
-    contactMessage: {
-      displayName: `${name}`,
-      vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
-      verified: true
-    }
-  }
-};
+        let name = await conn.getName(m.sender)
+        let fkon = {
+            key: {
+                fromMe: true,
+                participant: `${m.sender.split`@`[0]}@s.whatsapp.net`,
+                ...(m.chat ? { remoteJid: '16500000000@s.whatsapp.net' } : {})
+            },
+            message: {
+                contactMessage: {
+                    displayName: `${name}`,
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+                    verified: true
+                }
+            }
+        };
 
         // m.reply(`${messages}`)
         conn.relayMessage(m.chat, {
             extendedTextMessage: {
-              text: messages,
-              contextInfo: {
-                mentionedJid: [m.sender],
-                externalAdReply: {
-                  showAdAttribution: true,
-                  title: global.wm,
-                  mediaType: 1,
-                  previewType: 0,
-                  renderLargerThumbnail: true,
-                  thumbnailUrl: 'https://cdn.arifzyn.tech/f/9k2rxo6w.jpg',
-                  sourceUrl: global.link,
-                  body: "Copyright © Ammar 2024 - All Right Reserved",
-                }
-              }, mentions: [m.sender]
+                text: messages,
+                contextInfo: {
+                    mentionedJid: [m.sender],
+                    externalAdReply: {
+                        showAdAttribution: true,
+                        title: global.wm,
+                        mediaType: 1,
+                        previewType: 0,
+                        renderLargerThumbnail: true,
+                        thumbnailUrl: 'https://cdn.arifzyn.tech/f/9k2rxo6w.jpg',
+                        sourceUrl: global.link,
+                        body: "Copyright © Ammar 2024 - All Right Reserved",
+                    }
+                }, mentions: [m.sender]
             }
-          }, { quoted: fkon });
+        }, { quoted: m });
     },
 };

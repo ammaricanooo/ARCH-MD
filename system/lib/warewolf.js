@@ -1198,7 +1198,7 @@ async function run_pagi(conn, id, data) {
     await win(sesi(id, data), 1, conn, data);
 }
 
-module.exports = {
+export {
     emoji_role,
     sesi,
     playerOnGame,
@@ -1217,6 +1217,7 @@ module.exports = {
     roleChanger,
     roleAmount,
     roleGenerator,
+    addTimer,
     addTimer,
     startGame,
     playerHidup,

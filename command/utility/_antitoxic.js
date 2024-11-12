@@ -10,7 +10,7 @@ export function before(m, { isBotAdmin }) {
 
     if (chat.antitoxic === true && isBadword) {
         user.balance -= 5000
-        m.reply('Hey Jangan Toxic Ya!!\n' + `Balance kamu berkurang sebesar: *5000*\n` + '\nUntuk mematikan ketik *.disable antibadword* (only group admins)')
+        m.reply('Hey Jangan Toxic Ya!!\n' + `Balance kamu berkurang sebesar: *5000*`)
         // if (user.warning >= 50) {
         //     user.banned = false
         //     user.warning = 0

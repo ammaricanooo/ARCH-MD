@@ -55,7 +55,7 @@ export default {
                             }, { quoted: m })
 
                             // Delay sebelum mengirimkan track berikutnya
-                            await delay(15000)
+                            await delay(1500)
                         } else {
                             m.reply(`Error: Failed to download track ${i + 1}`)
                         }

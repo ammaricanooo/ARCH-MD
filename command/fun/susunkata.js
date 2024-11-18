@@ -146,19 +146,25 @@ Type *nyerah* to surrender`.trim();
             reward.limit += 5;
 
             clearTimeout(conn.susunkata[id].timeout);
-            await conn.sendQuick(
-                m.chat,
-                `Selamat *${m.pushName}* 🎉 Jawaban kamu benar!
+            await m.reply(`Selamat @${m.sender.split('@')[0]} 🎉 Jawaban kamu benar!
 
 balance kamu bertambah sebesar: ${json.winScore} dan limit kamu juga bertambah sebesar: 5 limit!
 
 
-Mau main lagi?`,
-                wm,
-                null,
-                [['Main Lagi', '.susunkata']],
-                m
-            );
+Mau main lagi? ketik *.susunkata* lagi ya kak heheh`)
+//             await conn.sendQuick(
+//                 m.chat,
+//                 `Selamat *${m.pushName}* 🎉 Jawaban kamu benar!
+
+// balance kamu bertambah sebesar: ${json.winScore} dan limit kamu juga bertambah sebesar: 5 limit!
+
+
+// Mau main lagi?`,
+//                 wm,
+//                 null,
+//                 [['Main Lagi', '.susunkata']],
+//                 m
+//             );
             delete conn.susunkata[id];
         } else {
             conn.sendMessage(m.chat, {

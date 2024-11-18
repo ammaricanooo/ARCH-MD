@@ -215,7 +215,7 @@ Prefix : 「 ${m.prefix} 」
                         sourceUrl: global.link,
                         body: "Copyright © Ammar 2024 - All Right Reserved",
                     }
-                }, mentions: [m.sender]
+                }, mentions: m.mentionedJid
             }
         }, { quoted: m });
     },

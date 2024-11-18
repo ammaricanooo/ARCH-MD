@@ -145,19 +145,25 @@ Type *nyerah* to surrender`.trim();
             reward.limit += 5;
 
             clearTimeout(conn.siapakahaku[id].timeout);
-            await conn.sendQuick(
-                m.chat,
-                `Selamat @${m.sender.split('@')[0]} 🎉 Jawaban kamu benar!
+            await m.reply(`Selamat @${m.sender.split('@')[0]} 🎉 Jawaban kamu benar!
 
 balance kamu bertambah sebesar: ${json.winScore} dan limit kamu juga bertambah sebesar: 5 limit!
 
 
-Mau main lagi?`,
-                wm,
-                null,
-                [['Main Lagi', '.siapakahaku']],
-                m
-            );
+Mau main lagi? ketik *.siapakahaku* lagi ya kak heheh`)
+//             await conn.sendQuick(
+//                 m.chat,
+//                 `Selamat @${m.sender.split('@')[0]} 🎉 Jawaban kamu benar!
+
+// balance kamu bertambah sebesar: ${json.winScore} dan limit kamu juga bertambah sebesar: 5 limit!
+
+
+// Mau main lagi?`,
+//                 wm,
+//                 null,
+//                 [['Main Lagi', '.siapakahaku']],
+//                 m
+//             );
             delete conn.siapakahaku[id];
         } else {
             conn.sendMessage(m.chat, {

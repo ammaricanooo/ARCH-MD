@@ -444,7 +444,7 @@ export default new (class Function {
 
     return ucapanWaktu;
   }
-  
+
   pomf(media) {
     return new Promise(async (resolve, reject) => {
       let mime = await fileTypeFromBuffer(media);

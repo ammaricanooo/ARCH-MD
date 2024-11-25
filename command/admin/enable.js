@@ -37,6 +37,18 @@ export default {
                 chat.simi = true;
                 console.log(chat.simi)
                 m.reply("Success enable simi!!");
+            } else if (text == "antisticker") {
+                chat.antisticker = true;
+                console.log(chat.antisticker)
+                m.reply("Success enable antisticker!!");
+            } else if (text == "antifoto") {
+                chat.antifoto = true;
+                console.log(chat.antifoto)
+                m.reply("Success enable antifoto!!");
+            } else if (text == "autosholat") {
+                chat.autosholat = true;
+                console.log(chat.autosholat)
+                m.reply("Success enable autosholat!!");
             } else if (text == "viewonce") {
                 try {
                     chat.viewonce = true;
@@ -46,7 +58,12 @@ export default {
                     m.reply(error)
                 }
             } else {
-                m.reply("Sorry");
+                m.reply(`List option:
+| antifoto
+| antitoxic
+| antisticker
+| viewoce
+| simi`);
             }
             console.log(chat)
         } catch (err) {

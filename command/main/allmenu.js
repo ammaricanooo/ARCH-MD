@@ -44,6 +44,7 @@ Prefix : 「 ${m.prefix} 」
 │• ${m.prefix}leave
 │• ${m.prefix}linkgc/linkgrup
 │• ${m.prefix}promote <tag member>
+│• ${m.prefix}revoke
 │• ${m.prefix}setdescgc <text>
 │• ${m.prefix}setnamegc <text>
 │• ${m.prefix}tagall

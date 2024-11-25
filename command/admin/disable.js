@@ -38,12 +38,25 @@ export default {
                 chat.simi = false;
                 console.log(chat.simi)
                 m.reply("Success disable simi!!");
+            } else if (text == "antisticker") {
+                chat.antisticker = false;
+                console.log(chat.antisticker)
+                m.reply("Success enable antisticker!!");
+            } else if (text == "antifoto") {
+                chat.antifoto = false;
+                console.log(chat.antifoto)
+                m.reply("Success enable antifoto!!");
             } else if (text == "viewonce") {
                 chat.viewonce = false;
                 console.log(chat.viewonce)
                 m.reply("Success disable anti view once!!");
             } else {
-                m.reply("Sorry there have some error");
+                m.reply(`List option:
+| antifoto
+| antitoxic
+| antisticker
+| viewoce
+| simi`);
             }
 
         } catch (err) {

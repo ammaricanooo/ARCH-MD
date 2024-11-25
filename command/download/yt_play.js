@@ -16,7 +16,8 @@ export default {
 
         // Pencarian video berdasarkan query text
         const search = await youtubeSearch(text);
-        const vid = search.video[Math.floor(Math.random() * search.video.length)];
+        const video = search.video.slice(0, 5);
+        const vid = video[Math.floor(Math.random() * video.length)];
         if (!vid) throw 'Video not found, try another title';
 
         const { title, thumbnail, durationH, view, publishedTime, url } = vid;
@@ -49,21 +50,22 @@ export default {
             writableStream.on('finish', async () => {
                 // Mengirim file audio
                 await conn.sendMessage(m.chat, {
-                    document: {
+                    audio: {
                         url: filePath,
                     },
                     mimetype: 'audio/mpeg',
-                    fileName: `${title}.mp3`,
+                    ptt: true,
+                    //fileName: `${title}.mp3`,
                     caption: `Title: ${title}\nLength: ${durationH}\nViews: ${view}\nUploaded: ${publishedTime}`,
                     contextInfo: {
                         externalAdReply: {
                             showAdAttribution: true,
-                            mediaType: 2,
+                            mediaType: 1,
                             mediaUrl: url,
                             title: title,
                             body: 'Audio Download',
                             sourceUrl: url,
-                            thumbnail: await (await conn.getFile(thumbnail)).data,
+                            //thumbnail: await (await conn.getFile(thumbnail)).data,
                         },
                     },
                 }, { quoted: m });
